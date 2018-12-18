@@ -9,26 +9,34 @@ function dwarfRollCall(dwarves) {
 }
 
 function summonCaptainPlanet(planeteerCalls){
-  let planet = [];
+  let planeteer = [];
   let i = 0;
-  
-  while (i < planeteerCalls.length){
-    planet.push(planeteerCalls[i].toUpperCase() + '!');
+  do {
+    planeteer.push(planeteerCalls[i].toUpperCase() + '!');
     i++;
   }
+  while (i < planeteerCalls.length){
+  }
 
-  return planet
+  return planeteer
 }
 
 function longPlaneteerCalls(words) {
-  var word = false
-  for (let i = 0; i < words.length; i++){
+  for (let i = 0; i < words.length; i ++){
     if (words[i].length > 4){
+    return true
     }
-    
-  return word
-  }
+  }  
+   return false
 }
 
 function findTheCheese (foods) {
+  let cheese = ["cheddar", "gouda", "camembert"]
+  for (let i = 0; i < foods.length; i ++){
+    if (cheese.includes(foods[i]) === true){
+      return foods[i]
+    }
+  }
+     return "no cheese!"
+
 }
